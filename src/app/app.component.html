@@ -1,13 +1,13 @@
-<h3>Cardápio</h3>
+<h3 class="title">Cardápio</h3>
 
 <!--FORMULÁRIO PARA CRIAR INCLUSAO DE PRODUTOS-->
-<form [formGroup]="form">
-    <input formControlName="name" type="text" value="Nome" /> R$
+<form [formGroup]="form" (ngSubmit)="adicionarProduto()">
+    <input formControlName="nome" type="text" value="Nome" /> R$
     <input formControlName="preco" type="number" />
     <input [disabled]="form.invalid" type="submit" value="Adicionar" />
 
 </form>
-<table>
+<table class="produtos">
     <tr>
         <th>ID</th>
         <th>Nome</th>
@@ -19,7 +19,9 @@
         <td>{{produto.nome}}</td>
         <td>{{produto.preco}}</td>
         <!--BOTÃO PARA EXCLUIR UM ITEM -->
-        <td><button>Excluir</button></td>
+        <td>
+            <button (click)="excluir(produto)">Excluir</button>
+        </td>
     </tr>
 
 </table>

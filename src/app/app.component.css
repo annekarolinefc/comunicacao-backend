@@ -1,3 +1,11 @@
 input [type="number"] {
     width: 5em;
 }
+
+.title {
+    font-size: larger;
+}
+
+.produtos {
+    margin-top: 2rem;
+}

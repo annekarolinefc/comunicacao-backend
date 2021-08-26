@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     //precisa de adicionar o HTTPCLIENTEMODULE para comunicar com o backend
     HttpClientModule,
+    //Adicionar controle dos formulários
     ReactiveFormsModule,
   ],
   providers: [],
